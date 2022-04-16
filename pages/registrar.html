@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registrar</title>
+    <link rel="shortcut icon" href="./fotos/logo.JPG">
+    <!-- Font awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./stylesheet/style.css">
+</head>
+<body>
+    <header>    
+        <div class="logo1">
+            <a href="index.html">
+              <img src="./fotos/logo.JPG" alt="logo1" class="img1" />
+            </a>
+        </div>
+        <label for="menu" class="menu__header">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" id="menu">
+        <nav class="div__header--menu">
+            <label for="menu" class="close__Menu">
+                <i class="fa-regular fa-circle-xmark"></i>
+            </label>
+            <div class="header__navegacion">
+                <ul type="none">
+                    <li id="nav__items1">
+                        <a href="Tienda.html">Tienda</a>
+                        <ul type="none">
+                            <li><a href="">Almohadas</a></li>
+                            <li><a href="">Edredones</a></li>
+                            <li><a href="">Camas</a></li>
+                            <li><a href="">Cortinas</a></li>
+                        </ul>
+                    </li>
+                    <li  id="nav__items2">
+                        <a href="Sobre Nosotros.html">Sobre Nosotros</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="header__navegacion2">
+                <ul type="none">
+                    <li id="nav__items3">
+                        <a href="locales.html"><i class="fa-solid fa-location-dot"></i>Busca Locales</a>
+                    </li>
+                    <li  id="nav__items4">
+                        <a href="registrar.html">Unite</a>
+                    </li>
+                    <li id="nav__items5">
+                        <a href="iniciar.html">Iniciar Sesión</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="main__registrar">
+        <section class="section__registrar">
+            <div class="logo__registrar">
+                <img src="./fotos/logo.JPG" alt="logoRegistrar" class="img__registrar" />
+            </div>
+            <h1>Crea tu cuenta</h1>
+            <h4> Unite a Tian.co!</h4>
+        </section>
+        <form action="" method="get" class="form__registrar">
+            <label for="name">Nombre<span>*</span></label>
+            <input type="text" name="name" id="name" placeholder="Nombre" required>
+            <label for="last name">Apellido<span>*</span></label>
+            <input type="text" name="last name" id="last name" placeholder="Apellido" required>
+            <label for="email">Email<span>*</span></label> 
+            <input type="email" name="email" id="email" placeholder="Tu email" required >
+            <label for="password">Contraseñ<span>*</span></label>
+            <input type="password" name="password" id="password" placeholder="Crea tu contraseña" required>
+            <div class="button_registrar">
+                <button type="submit" class="button__registrar--unite">Unite</button>
+            </div>
+            <div class="llevar__iniciar">
+                <p>Ya tenes cuenta? <a href="./iniciar.html">Iniciar Sesión</a></p>
+            </div>
+        </form>
+
+
+    </main>
+
+    <footer>
+
+        <nav class="sobre__nosotros">
+            <ul type="none"> 
+                <li id="footer__items1">
+                    <a href="./Sobre Nosotros.html">Sobre Nosotros</a> 
+                    <ul type="none">
+                        <li><a href="">Nuestra Fabrica</a></li>
+                        <li><a href="">Nuestro Algodon</a></li>
+                    </ul>
+                </li>
+            </ul>
+            <ul type="none">
+                <li id="footer__items2">
+                    <a href="./locales.html">Nuestros Locales</a>
+                    <ul type="none">
+                        <li><a href="../Algodon Huang/locales.html#argentina">Argentina</a></li>
+                        <li><a href="./locales.html#china">China</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+        </nav>
+
+        <div class="social__media">
+            <a href=""><i class="fa-brands fa-instagram"></i></i></a> 
+            <a href=""><i class="fa-brands fa-facebook-f"></i></i></a>
+            <a href=""><i class="fa-brands fa-whatsapp" ></i></a>
+            <a href=""><i class="fa-brands fa-twitter"></i></a>
+        </div>
+
+    </footer>
+</body>
+</html>

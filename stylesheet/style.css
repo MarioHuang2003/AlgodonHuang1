@@ -1,0 +1,1358 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: white;
+}
+/* ---------------------------------------------------- */
+/* header */
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    padding: 0px 32px;
+    left: 0px;
+    right: 0px;
+    top: 0px;
+    background: white;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+header .logo1{
+    width: 5rem;
+}
+
+.img1 {
+    width: 100%;
+    height: 100%;
+}
+
+header .menu__header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2rem;
+    background-color: white;
+    border: none;
+    transition: box-shadow 0.5s ease-in;
+    color: black;
+}
+    
+input#menu {
+    display: none;
+}
+    
+header button.menu__header:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+input#menu:checked ~ .div__header--menu{
+    display: block;
+} 
+
+header .div__header--menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%; 
+    height: 100%;
+    background-color: white;
+}
+
+header .div__header--menu .close__Menu {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 1.5rem;
+}
+
+header .header__navegacion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 40%;
+    width: 100%;
+}
+
+header .header__navegacion ul{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+}
+
+header .header__navegacion ul li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+header .div__header--menu ul li a {
+    color: black;
+    text-decoration-line: none;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+header .div__header--menu div ul li ul li a{
+    font-size: 15px;
+    font-weight: normal;
+}
+
+header .header__navegacion2 {
+    display: grid;
+    justify-content: center;
+}
+
+#nav__items3 {
+    grid-area: items3;
+}
+
+#nav__items4{
+    grid-area: items4;
+}
+
+#nav__items5{
+    grid-area: items5;
+}
+
+header .header__navegacion2 ul {
+    width: 100%;
+    display: grid;
+    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+    grid-template-areas: 
+    "items3 items3"
+    "items4 items5";
+}
+header .header__navegacion2 ul #nav__items3{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
+
+header .header__navegacion2 ul #nav__items5 {
+    border: 1px solid gray;
+    display: flex;
+    background-color: white; 
+    border-radius: 50px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    padding: 5px;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 5px;
+}
+
+header .header__navegacion2 ul #nav__items4{
+    border: 2px solid black;
+    display: flex;
+    align-self: center;
+    background-color: black; 
+    border-radius: 50px;
+    text-align: center;
+    width: 100%;
+    cursor: pointer;
+    padding: 5px 10px;
+    flex-direction: row;
+    justify-content: center;
+    margin-right: 5px;
+}
+
+header .header__navegacion2 ul #nav__items4:hover {
+    background-color: gray;
+}
+
+header .header__navegacion2 ul #nav__items5:hover{
+    border: 2px solid black;
+}
+
+header .header__navegacion2 ul #nav__items4 a{
+    color: #ffffff; 
+    font-size: 15px;
+    text-align: center;
+}
+
+header .header__navegacion2 ul #nav__items5 a {
+    color: black;
+    font-size: 15px;
+
+}
+
+@media screen and (min-width: 768px) {
+
+    header .menu__header {
+        display: none;
+    }
+
+    header .div__header--menu .close__Menu{
+        display: none;
+    }
+
+    input#menu:checked ~ .div__header--menu{
+        display: inherit;
+    } 
+
+    header .div__header--menu {
+        position: inherit;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    header .header__navegacion{
+        position: inherit;
+        height: auto;
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    header .header__navegacion ul {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: flex-start;
+        height: 100%;
+        width: 100%;
+    } 
+    header .header__navegacion #nav__items1 ul li {
+        border-radius: none;
+    } 
+
+    header .header__navegacion #nav__items1 ul li:hover {
+        background-color: rgb(216, 213, 213);
+    }
+    
+    header .header__navegacion ul li:hover, header .header__navegacion2 ul li:hover {
+        background-color: rgb(250, 250, 250);
+    }
+    
+    header .header__navegacion #nav__items1 {
+        padding: 0.5rem 1rem;
+        margin-left: 2rem;
+        position: relative;
+        border-radius: 15px;
+    }
+
+    header .header__navegacion #nav__items2 {
+        padding: 0;
+        position: relative;
+        width: 40%;
+        border-radius: 15px;
+    }
+    
+    header .header__navegacion2{
+        position: inherit;
+        height: 100%;
+        width: 50%;
+        justify-content: flex-end;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    header .header__navegacion2 ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    header .header__navegacion2 ul #nav__items3{
+        padding: 0.5rem 1rem;
+        margin: 1.2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+    }
+    
+    header .header__navegacion ul li a {
+        color: black;
+        text-decoration-line: none;
+        padding: 0.5rem 0rem;
+        font-size: 20px;
+        font-weight: normal;
+    }
+    
+    header .header__navegacion2 ul li a {
+        color: black;
+        text-decoration-line: none;
+        font-weight: normal;
+        font-size: 16px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header .header__navegacion #nav__items1:hover > ul {
+        display: flex;
+    }
+
+    header .header__navegacion #nav__items1 ul{
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    header .header__navegacion #nav__items1 ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 0.5rem;
+        height: 10rem;
+        background-color: rgb(250, 250, 250);
+        border-radius: 5px; 
+    }
+    
+    header .header__navegacion2 ul #nav__items5 {
+        height: 40px;
+        align-self: center;
+        width: 9rem;
+    }
+
+    header .header__navegacion2 ul #nav__items4 {
+        height: 40px;
+        align-self: center;
+        width: 80px;
+    }
+}
+
+/* Fin header */
+/* ---------------------------------------------------- */
+/* footer */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    position: sticky;
+    background: white;
+    box-shadow:0 -3px 3px rgba(0, 0, 0, 0.1);
+}
+
+footer .sobre__nosotros {
+    position: inherit;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+}
+
+.sobre__nosotros ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 0rem; 
+}
+
+footer .sobre__nosotros ul a {
+    color: black;
+    text-decoration-line: none;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+footer .sobre__nosotros ul li ul li a {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+footer .social__media {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2.5rem 0 1rem;
+}
+
+footer .social__media a {
+  font-size: 2rem;
+  width: 3rem;
+  height: 3rem;
+  color: white;
+  background-color: black;
+  border-radius: 50%;
+  text-decoration-line: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.75rem;
+  transition: all 0.5s ease-in;
+}
+
+footer .social__media a:hover {
+    color: white;
+    background-color: black;
+    transform: scale(1.1) translateY(-5px);
+    width: 3rem;
+    height: 3rem;
+}
+
+@media screen and (min-width: 768px) {
+    footer {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        padding: 0rem 4rem;
+        left: 0px;
+        right: 0px;
+        top: 0px;
+    }
+    
+    footer .sobre__nosotros {
+        position: inherit;
+        height: 100%;
+        width: 47%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-content: space-evenly;
+        margin-top: 0%;
+    }
+    
+    .sobre__nosotros ul{
+        align-items: flex-start;
+        height: 100%;
+        width: 100%;
+        padding: 1rem 0rem; 
+    }
+    
+    footer .sobre__nosotros ul #footer__items1, footer .sobre__nosotros ul #footer__items2 {
+        margin: 1.2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    footer .sobre__nosotros ul a {
+        font-size: 20px;
+    }
+    
+    footer .sobre__nosotros ul li ul li a {
+        font-size: 15px;
+    }
+    
+
+    footer .social__media {
+        justify-content: flex-end;
+        width: 48%;
+    }
+}
+    
+
+
+/* Fin footer */
+/* ---------------------------------------------------- */
+/* main index */
+
+
+.index__main {
+    display: grid;
+    justify-items: center;
+}
+
+.div__uno {
+    grid-area: div1;
+}
+
+.div__dos {
+    grid-area: div2;
+}
+
+#almohada {
+    grid-area: almohada-main;
+}
+
+#cortina {
+    grid-area: cortina-main;
+}
+
+.index__main .section__uno {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template: repeat(4, 1fr) / 1fr;
+    grid-template-areas:
+    "div1"
+    "div2"
+    "almohada-main"
+    "cortina-main";
+    width: 100%;
+    height: 100%;
+}
+
+.index__main section h2{
+    font-family: Comic Sans MS;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+.index__main .section__uno div h2, .index__main .section__uno .compra__img h2 {
+    color: white;
+    background: rgba(0, 0, 0, 0.3);
+    padding: 5px 0;
+    width: 100%;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.div__uno{
+    width: 100%;
+    height: 300px;
+    background-image: url("../fotos/campos-del-algodón.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.div__dos{
+    width: 100%;
+    height: 300px;
+    background-image: url("../fotos/cosechaAlgodon.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin: 5px 0px 10px;
+}
+
+main #almohada {
+    width: 100%;
+    height: 300px;
+    background-image: url("../fotos/almohada-menu.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main #cortina {
+    width: 100%;
+    height: 300px;
+    background-image: url("../fotos/cortina-home.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+
+    .index__main .section__uno {
+        grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+        grid-template-areas:
+        "div1 div1"
+        "div2 div2"
+        "almohada-main cortina-main";
+    }
+
+    .index__main section h2{
+        font-weight: 700;
+        font-size: 40px;
+    }
+
+    .index__main .section__uno div h2, .index__main .section__uno .compra__img h2 {
+        font-size: 2rem;
+        padding: 1rem 0;
+    }
+
+    .div__uno{
+        width: 100%;
+        height: 500px;
+        justify-content:flex-end;
+    }
+
+    .div__dos{
+        width: 100%;
+        height: 500px;
+        justify-content:flex-end;
+        margin: 15px 0px 35px;
+    }
+
+    main #almohada{
+        width: 100%;
+        height: 500px;
+        justify-content:flex-end;
+        margin-bottom: 15px;
+    }
+
+    main #cortina  {
+        width: 100%;
+        height: 500px;
+        justify-content:flex-end;
+    }
+
+    .index__main  button {
+        border: none;
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+    }
+
+    .index__main  .section__uno div a {
+        padding: 1rem 1rem 1rem;
+        margin: 1rem 0 1.5rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        align-content: center;
+        text-decoration-line: none;
+    }
+    .index__main .compra__img a {
+        text-decoration-line: none;
+    }
+
+    .index__main .compra__img button{
+        margin: 0 4em 2rem;
+    }
+
+    .index__main .section__uno button[type= "button"] {
+        background-color: white;
+        color: black;
+        border: 1px solid black;
+        border-radius: 50px;
+        width: 7rem;
+        font-size: 14px;
+        
+    }
+
+    .index__main .section__uno button[type= "button"]:hover {
+        cursor: pointer;
+        border: 2px solid black;
+        font-size: 14px;
+
+    }
+
+}
+
+/* Fin main index */
+/* ---------------------------------------------------- */
+/* Registrar */
+
+.main__registrar {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+
+.main__registrar .section__registrar {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0;
+    margin: 1rem 0 0rem;
+    text-align: center;
+}
+
+.main__registrar .section__registrar .logo__registrar {
+    width:60px;
+    height: 60px;
+    margin: 3rem 0rem 1rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.main__registrar .section__registrar .logo__registrar .img__registrar{
+    width: 100%;
+    height: 100%;
+}
+
+.main__registrar .section__registrar h1 {
+    display:  flex;
+    flex-direction: row;
+    align-self: center;
+    font-weight: 700;
+    font-size: 35px;
+    margin-bottom: 0.75rem;
+}
+
+.main__registrar .section__registrar h4 {
+    display:  flex;
+    flex-direction: row;
+    align-self: center;
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.main__registrar .form__registrar {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem 0 3rem;
+    width: 100%;
+}
+
+.main__registrar .form__registrar input {
+    padding: 0 0 0.5rem;
+    margin: 0.5rem 0 0.75rem;
+}
+
+.main__registrar .form__registrar label {
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+}
+.main__registrar .form__registrar label span {
+    color: red;
+    margin: 4px;
+}
+
+.main__registrar .form__registrar .button_registrar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+} 
+
+
+.main__registrar .form__registrar .button_registrar button{
+    text-transform: uppercase;
+    padding: 5.5px 0 ;
+    margin-top: 1rem;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    border: 0ch;
+    width: 100%;
+} 
+
+.main__registrar .form__registrar .llevar__iniciar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+    font-size: 14px;
+}
+
+@media screen and (min-width:768px) {
+    .main__registrar .form__registrar {
+        width: fit-content;
+    }
+
+    .main__registrar .form__registrar .button_registrar button{
+        padding: 5.5px 180px ;
+    } 
+
+    .main__registrar .section__registrar h1 {
+        font-size: 40px;
+    }
+    
+    .main__registrar .section__registrar h4 {
+        font-size: 20px;
+    }
+
+    .main__registrar .form__registrar .llevar__iniciar {
+        font-size: 17px;
+    }
+}
+
+/* Fin Registrar */
+/* ---------------------------------------------------- */
+/* Iniciar */
+
+.main__iniciar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main__iniciar .section__iniciar {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 0 0;
+    margin: 1rem 0 0rem;
+    text-align: center;
+}
+
+.main__iniciar .section__iniciar .logo__iniciar {
+    width:60px;
+    height: 60px;
+    margin: 3rem 0rem 1rem 0rem;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+}
+
+.main__iniciar .section__iniciar div img  {
+    height: 100%;
+    width: 100%;
+}
+
+.main__iniciar .section__iniciar h1 {
+    display:  flex;
+    flex-direction: row;
+    align-self: center;
+    font-weight: 700;
+    font-size: 27px;
+    margin-bottom: 0.75rem;
+}
+
+.main__iniciar .section__iniciar h4 {
+    display:  flex;
+    flex-direction: row;
+    align-self: center;
+    font-weight: 500;
+    font-size: 15px;
+}
+.main__iniciar .form__iniciar {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    margin: 1rem 0 3rem;
+    width: 100%;
+}
+
+.main__iniciar .form__iniciar input {
+    padding: 0 0 0.5rem;
+    margin: 0.5rem 0 0.75rem;
+
+}
+
+.main__iniciar .form__iniciar label {
+    color: black;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.main__iniciar .form__iniciar .button__iniciar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+} 
+
+
+.main__iniciar .form__iniciar .button_iniciar button{
+    text-transform: uppercase;
+    padding: 5.5px 0;
+    margin-top: 1rem;
+    color: white;
+    background-color: black;
+    border-radius: 4px;
+    border: 0ch;
+    width: 100%;
+} 
+
+.main__iniciar .form__iniciar .llevar__registrar {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1rem;
+    margin: 1rem;
+}
+@media screen and (min-width: 768px) {
+    .main__iniciar .form__iniciar {
+        width: auto;
+    }
+
+    .main__iniciar .form__iniciar .button_iniciar button{
+        padding: 5.5px 180px;
+    } 
+
+    .main__iniciar .section__iniciar h1 {
+        font-size: 40px;
+    }
+    
+    .main__iniciar .section__iniciar h4 {
+        font-size: 20px;
+    }
+}
+/* Fin Inicair */
+/* ---------------------------------------------------- */
+/* Locales */
+
+.main__locales {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 100px 1fr 1fr;
+    width: 100%;
+}
+
+.main__locales .section__locales--uno{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.main__locales .section__locales--uno .div__nuestros--locales {
+    width: 100%;
+    font-size: 20px;
+    color: white;
+    text-transform: uppercase;
+    background: black;
+    padding: 0.5rem 0;
+    text-align: center;
+    margin: 3rem;
+}
+
+.div__argentina {
+    grid-area: argentina;
+}
+
+.article__palermo{
+    grid-area: palermo;
+}
+
+.article__abasto{
+    grid-area: abasto;
+}
+
+.main__locales .section__locales--dos, .main__locales .section__locales--tres {
+    display: grid;
+    align-items: center;
+    text-align: center;
+    grid-template: 75px repeat(2, 1fr) / 1fr;
+    grid-template-areas:
+    "argentina"
+    "palermo"
+    "abasto";
+    width: 91%;
+    margin: 1rem 0;
+}
+
+.main__locales .section__locales--dos .div__argentina,
+.main__locales .section__locales--tres .china {
+    width: 100%;
+    text-transform: uppercase;
+    color: black;
+    text-align: center;
+    font-weight: 400;
+    font-size: 15px;
+    padding: 0.5rem 0 ;
+    background-color: whitesmoke;
+    margin-bottom: 1rem;
+}
+
+.main__locales .section__locales--dos .article__palermo, 
+.main__locales .section__locales--dos .article__abasto,
+.main__locales .section__locales--tres .article__shanhai,
+.main__locales .section__locales--tres .article__pekin{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid black;
+    width: 100%;
+    margin-bottom: 1rem; 
+}
+
+.main__locales .section__locales--dos .article__palermo .mapa__palermo,
+.main__locales .section__locales--dos .article__abasto .mapa__abasto,
+.main__locales .section__locales--tres .article__shanhai .mapa__shanhai,
+.main__locales .section__locales--tres .article__pekin .mapa__pekin {
+    width: 100%;
+    height: 20rem;
+    border-bottom: 1px solid black;
+}
+
+.main__locales .section__locales--dos .article__palermo .mapa__palermo iframe,
+.main__locales .section__locales--dos .article__abasto .mapa__abasto iframe,
+.main__locales .section__locales--tres .article__shanhai .mapa__shanhai iframe,
+.main__locales .section__locales--tres .article__pekin .mapa__pekin iframe {
+    width: 100%;
+    height: 100%;
+}
+
+.main__locales .section__locales--dos .palermo__letra h4,
+.main__locales .section__locales--dos .abasto__letra h4,
+.main__locales .section__locales--tres .shanhai__letra h4,
+.main__locales .section__locales--tres .pekin__letra h4   {
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.main__locales .section__locales--dos .palermo__letra, 
+.main__locales .section__locales--dos .abasto__letra,
+.main__locales .section__locales--tres .shanhai__letra,
+.main__locales .section__locales--tres .pekin__letra  {
+    font-size: 16px;
+    font-weight: 300;
+    text-align: center;
+    background-color: rgb(32, 31, 31);
+    color: rgb(255, 255, 255);
+    height: 160px;
+    width: 100%;
+}
+
+.main__locales .section__locales--dos .palermo__letra a, 
+.main__locales .section__locales--dos .abasto__letra a,
+.main__locales .section__locales--tres .shanhai__letra a,
+.main__locales .section__locales--tres .pekin__letra a  {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    text-decoration-line: none;
+}
+
+.main__locales .section__locales--dos .palermo__letra a button, 
+.main__locales .section__locales--dos .abasto__letra a button,
+.main__locales .section__locales--tres .shanhai__letra a button,
+.main__locales .section__locales--tres .pekin__letra a button {
+    padding: 0.3rem;
+    margin: 0.5rem;
+    text-transform: uppercase;
+    border: 1px solid gray;
+    border-radius: 50px;
+    background-color: white;
+}
+
+.main__locales .section__locales--dos .palermo__letra a button:hover, 
+.main__locales .section__locales--dos .abasto__letra a button:hover,
+.main__locales .section__locales--tres .shanhai__letra a button:hover,
+.main__locales .section__locales--tres .pekin__letra a button:hover {
+   border: 3px solid white;
+   font-weight: 700;
+}
+
+@media screen and (min-width:768px) {
+
+    .main__locales {
+        grid-template-rows: 162px 1fr 1fr;
+    }
+
+    .main__locales .section__locales--uno .div__nuestros--locales {
+        font-size: 2rem;
+        padding: 1rem 0;
+        margin: 3rem;
+    }
+
+    .main__locales .section__locales--dos .div__argentina,
+    .main__locales .section__locales--tres .china  {
+        font-weight: 600;
+        font-size: 30px;
+        padding: 1rem 0 ;
+        margin-bottom: 1.5rem;
+    }
+
+    .main__locales .section__locales--dos, .main__locales .section__locales--tres {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 2rem 0 4rem;
+    } 
+ 
+    .main__locales .section__locales--dos .article__abasto,
+    .main__locales .section__locales--tres .article__pekin{
+        width: 45%;
+        margin-bottom: 0; 
+        margin-left: 0.75rem;
+    }
+
+    .main__locales .section__locales--dos .article__palermo, 
+    .main__locales .section__locales--tres .article__shanhai {
+        width: 45%;
+        margin-bottom: 0; 
+        margin-right: 0.75rem;
+    }
+
+    .main__locales .section__locales--dos .article__palermo .mapa__palermo,
+    .main__locales .section__locales--dos .article__abasto .mapa__abasto,
+    .main__locales .section__locales--tres .article__shanhai .mapa__shanhai,
+    .main__locales .section__locales--tres .article__pekin .mapa__pekin {
+        height: 26rem;
+    }
+    
+}
+
+/* Fin Locales */
+/* ---------------------------------------------------- */
+/* Sobre Nosotros */
+
+.main__nosotros {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__nosotros #sobre__nosotros--h2 {
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    text-transform: uppercase;
+    background: black;
+    padding: 1rem 0;
+    text-align: center;
+    margin: 3rem 0 2rem;
+    font-size: 40px;
+}
+
+.main__nosotros .section__campoAlgodon {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: whitesmoke;
+    width: 90%;
+    margin: 2rem 0 4rem;
+
+}
+
+.main__nosotros .section__campoAlgodon .article__campoAlgodon,
+.main__nosotros .section__fabrica .article__fabrica  {
+    height: 100%;
+    width: 90%;
+}
+
+.main__nosotros .section__campoAlgodon .article__campoAlgodon .campo__algodon--img,
+.main__nosotros .section__fabrica .article__fabrica .fabrica__img {
+    max-width: 100%;
+    height: 100%;
+
+}
+
+
+.main__nosotros .section__campoAlgodon .descripcion__uno {
+    text-align: justify;
+    width: 90%;
+    background-color: white;
+}
+
+.main__nosotros .section__fabrica {
+    width: 80%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: whitesmoke;
+    width: 90%;
+    margin: 0rem 0 4rem;
+
+}
+
+.main__nosotros .section__fabrica .descripcion__dos {
+    
+    text-align: justify;
+    width: 90%;
+    background-color: white;
+}
+
+@media screen and (min-width:768px) {
+    .main__nosotros .section__campoAlgodon .article__campoAlgodon,
+    .main__nosotros .section__fabrica .article__fabrica {
+        height: 40rem;
+    }
+
+    .main__nosotros .section__campoAlgodon .article__campoAlgodon .campo__algodon--img,
+    .main__nosotros .section__fabrica .article__fabrica .fabrica__img {
+        width: 100%;
+        height: 100%;
+    
+    }
+    
+}
+/* Fin Sobre Nosotros */
+/* ---------------------------------------------------- */
+/* Tienda */
+
+.main__tienda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main__tienda .div__bolsa {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient( 133deg, #C2E3E8,rgba(195, 227, 232, 1), rgba(164, 212, 221, 1), rgba(163, 211, 219, 1), rgba(159, 207, 216, 1));
+    width: 100%;
+    height: 350px;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.main__tienda .div__bolsa img{
+    height: 100%;
+    object-fit: cover;
+}
+
+.main__tienda h2 {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    font-size: 30px;
+    color: white;
+    text-transform: uppercase;
+    background: #58A296;
+    padding: 0.5rem 0;
+    margin: 4rem 0 2rem;
+}
+
+.main__tienda .section__tienda--uno, .main__tienda .section__tienda--dos {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: 1fr;
+    margin: 1rem 0 2rem;
+    padding: 3rem 0;
+    text-align: center;
+    justify-content: center;
+    background-color: whitesmoke;
+    width: 95%;
+}
+
+.cambiar{
+    display: flex;
+    flex-direction: column; 
+    align-self: center;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.cambiar__img{
+    width: 90%;
+    height: 23rem;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+}
+
+.main__tienda .section__tienda--uno div img, .main__tienda .section__tienda--dos div img {
+    width: 100%;
+    height: 100%;
+}
+
+.div__cambiar{
+    text-align: center;
+    height: 250PX;
+    width: 100%;
+    padding: 10px 20px;
+}
+
+.main__tienda .section__tienda--uno h3, .section__tienda--dos h3 {
+    font-size: 25px;
+    margin: 0.5rem;
+}
+
+.main__tienda .section__tienda--uno h4, .section__tienda--dos h4 {
+    font-size: 15px;
+    font-weight: lighter;
+    text-align: center;
+    margin-bottom: 0.25rem;
+
+}
+
+.main__tienda .section__tienda--uno h5, .section__tienda--dos h5 {
+    font-size: 22px;
+    font-weight: lighter;
+    padding: 5px;
+    background-color: white;
+}
+
+.main__tienda .section__tienda--uno div button, .main__tienda .section__tienda--dos div button {
+    border: none; 
+    background-color: black; 
+    color: #ffffff; 
+    text-transform: uppercase;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 16px;
+    padding: 15px;
+    width: 150px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 15PX 5px 5px;
+}
+
+.main__tienda .section__tienda--uno div i, .main__tienda .section__tienda--dos div i {
+    margin: 0 6px;
+}
+
+.tienda__to--top {
+    background-color: white;
+    height: 4rem;
+    width: 4rem;
+    display: flex;
+    font-size: 3rem;
+    border-radius: 50%;
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    bottom: 3rem;
+    right: 1rem;
+}
+
+.tienda__to--top i {
+    color: black;
+}
+
+@media screen and (min-width: 768px) {
+
+    .main__tienda .div__bolsa {
+        height: 35rem;
+    }
+
+    .main__tienda h2 {
+        font-size: 50px;
+    }
+
+    .main__tienda .section__tienda--uno, .main__tienda .section__tienda--dos {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+    }
+
+    .tienda__to--top {
+        right: 3rem;
+    }
+}
+
+/* Fin Tienda */
+/* ---------------------------------------------------- */
