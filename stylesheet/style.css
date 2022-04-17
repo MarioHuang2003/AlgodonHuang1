@@ -34,6 +34,12 @@ header .logo1{
     height: 100%;
 }
 
+.img1:hover{
+    transform: rotate(360deg);
+    transition: 1s;
+
+}
+
 header .menu__header{
     display: flex;
     justify-content: center;
@@ -477,11 +483,11 @@ footer .social__media a:hover {
     grid-area: div2;
 }
 
-#almohada {
+#almohada__index {
     grid-area: almohada-main;
 }
 
-#cortina {
+#cortina__index {
     grid-area: cortina-main;
 }
 
@@ -548,7 +554,7 @@ footer .social__media a:hover {
     margin: 5px 0px 10px;
 }
 
-main #almohada {
+main #almohada__index {
     width: 100%;
     height: 300px;
     background-image: url("../fotos/almohada-menu.jpg");
@@ -562,7 +568,7 @@ main #almohada {
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-main #cortina {
+main #cortina__index {
     width: 100%;
     height: 300px;
     background-image: url("../fotos/cortina-home.jpg");
@@ -579,6 +585,19 @@ main #cortina {
 
 @media screen and (min-width: 768px) {
 
+    @keyframes zoomInDown {
+        0% {
+          opacity: 0;
+          transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+          animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+        }
+        60% {
+          opacity: 1;
+          transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+          animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+        }
+      }
+
     .index__main .section__uno {
         grid-template: repeat(3, 1fr) / repeat(2, 1fr);
         grid-template-areas:
@@ -590,6 +609,11 @@ main #cortina {
     .index__main section h2{
         font-weight: 700;
         font-size: 40px;
+    }
+
+    .index__main .section__uno div h2{
+        animation-name: zoomInDown;
+        animation-duration: 1s;
     }
 
     .index__main .section__uno div h2, .index__main .section__uno .compra__img h2 {
@@ -610,14 +634,14 @@ main #cortina {
         margin: 15px 0px 35px;
     }
 
-    main #almohada{
+    main #almohada__index{
         width: 100%;
         height: 500px;
         justify-content:flex-end;
         margin-bottom: 15px;
     }
 
-    main #cortina  {
+    main #cortina__index {
         width: 100%;
         height: 500px;
         justify-content:flex-end;
@@ -658,8 +682,9 @@ main #cortina {
 
     .index__main .section__uno button[type= "button"]:hover {
         cursor: pointer;
-        border: 2px solid black;
         font-size: 14px;
+        transform: scale(1.1);
+        background-color: #ECECEC;
 
     }
 
@@ -1267,6 +1292,10 @@ main #cortina {
 .main__tienda .section__tienda--uno div img, .main__tienda .section__tienda--dos div img {
     width: 100%;
     height: 100%;
+}
+
+.main__tienda .section__tienda--uno div img:hover, .main__tienda .section__tienda--dos div img:hover{
+    transform: scale(0.96);
 }
 
 .div__cambiar{

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tian.co</title>
     <link rel="shortcut icon" href="./fotos/logo.JPG">
+    <!-- Animate css -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <!-- Font awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <!-- Stylesheet -->
@@ -14,7 +18,7 @@
 <body>
     <header>    
         <div class="logo1">
-            <a href="index.html">
+            <a href="./index.html">
               <img src="./fotos/logo.JPG" alt="logo1" class="img1" />
             </a>
         </div>
@@ -29,29 +33,29 @@
             <div class="header__navegacion">
                 <ul type="none">
                     <li id="nav__items1">
-                        <a href="Tienda.html">Tienda</a>
+                        <a href="./pages/tienda.html">Tienda</a>
                         <ul type="none">
-                            <li><a href="">Almohadas</a></li>
-                            <li><a href="">Edredones</a></li>
-                            <li><a href="">Camas</a></li>
-                            <li><a href="">Cortinas</a></li>
+                            <li><a href="./pages/tienda.html/#almohada">Almohadas</a></li>
+                            <li><a href="./pages/tienda.html">Edredones</a></li>
+                            <li><a href="./pages/tienda.html">Camas</a></li>
+                            <li><a href="./pages/tienda.html/#cortina">Cortinas</a></li>
                         </ul>
                     </li>
                     <li  id="nav__items2">
-                        <a href="Sobre Nosotros.html">Sobre Nosotros</a>
+                        <a href="./pages/Sobre Nosotros.html">Sobre Nosotros</a>
                     </li>
                 </ul>
             </div>
             <div class="header__navegacion2">
                 <ul type="none">
                     <li id="nav__items3">
-                        <a href="locales.html"><i class="fa-solid fa-location-dot"></i>Busca Locales</a>
+                        <a href="./pages/locales.html"><i class="fa-solid fa-location-dot"></i>Busca Locales</a>
                     </li>
                     <li  id="nav__items4">
-                        <a href="registrar.html">Unite</a>
+                        <a href="./pages/registrar.html">Unite</a>
                     </li>
                     <li id="nav__items5">
-                        <a href="iniciar.html">Iniciar Sesión</a>
+                        <a href="./pages/iniciar.html">Iniciar Sesión</a>
                     </li>
                 </ul>
             </div>
@@ -63,59 +67,58 @@
         <section class="section__uno">
             <div class="div__uno">
                 <h2>Saber más sobre nuestro algodon</h2>
-                <a href="./Sobre Nosotros.html#algodon"><button type="button" class="button">Ver Más</button></a>
+                <a href="./pages/Sobre Nosotros.html#algodon"><button type="button" class="button">Ver Más</button></a>
             </div>
 
             <div class="div__dos">
                 <h2>Conoce más sobre nuestra fabrica</h2>
-                <a href="./Sobre Nosotros.html#fabrica"><button type="button" class="button">Ver Más</button></a>
+                <a href="./pages/Sobre Nosotros.html#fabrica"><button type="button" class="button">Ver Más</button></a>
             </div>
 
-            <article class="compra__img" id="almohada">
+            <article class="compra__img" id="almohada__index">
                 <h2>Almohadas</h2>
-                <a href="Tienda.html"><button type="button" class="button">Comprar</button></a>
+                <a href="./pages/tienda.html"><button type="button" class="button">Comprar</button></a>
             </article>
 
-            <article class="compra__img" id="cortina">
+            <article class="compra__img" id="cortina__index">
                 <h2>Cortinas</h2>
-                <a href="Tienda.html"><button type="button" class="button" >Comprar</button></a>
+                <a href="./pages/tienda.html"><button type="button" class="button" >Comprar</button></a>
             </article>
         </section>
     </main>
 
     <footer>
-
         <nav class="sobre__nosotros">
             <ul type="none"> 
                 <li id="footer__items1">
-                    <a href="./Sobre Nosotros.html">Sobre Nosotros</a> 
+                    <a href="./pages/Sobre Nosotros.html">Sobre Nosotros</a> 
                     <ul type="none">
-                        <li><a href="">Nuestra Fabrica</a></li>
-                        <li><a href="">Nuestro Algodon</a></li>
+                        <li><a href="./pages/Sobre Nosotros.html">Nuestra Fabrica</a></li>
+                        <li><a href="./pages/Sobre Nosotros.html">Nuestro Algodon</a></li>
                     </ul>
                 </li>
             </ul>
             <ul type="none">
                 <li id="footer__items2">
-                    <a href="./locales.html">Nuestros Locales</a>
+                    <a href="./pages/locales.html">Nuestros Locales</a>
                     <ul type="none">
-                        <li><a href="../Algodon Huang/locales.html#argentina">Argentina</a></li>
-                        <li><a href="./locales.html#china">China</a></li>
+                        <li><a href="./pages/locales.html#argentina">Argentina</a></li>
+                        <li><a href="./pages/locales.html#china">China</a></li>
                     </ul>
                 </li>
             </ul>
-
         </nav>
-
         <div class="social__media">
             <a href=""><i class="fa-brands fa-instagram"></i></a> 
             <a href=""><i class="fa-brands fa-facebook-f"></i></a>
             <a href=""><i class="fa-brands fa-whatsapp" ></i></a>
             <a href=""><i class="fa-brands fa-twitter"></i></a>
         </div>
-
     </footer>
-    
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
 </body>
 </html>
 
