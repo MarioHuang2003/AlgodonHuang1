@@ -98,6 +98,8 @@ header .header__navegacion ul{
     text-align: center;
     height: 100%;
     width: 100%;
+    padding: 0;
+    margin-bottom: 0;
 }
 
 header .header__navegacion ul li {
@@ -142,6 +144,8 @@ header .header__navegacion2 ul {
     grid-template-areas: 
     "items3 items3"
     "items4 items5";
+    padding: 0;
+    margin-bottom: 0;
 }
 header .header__navegacion2 ul #nav__items3{
     display: flex;
@@ -583,6 +587,10 @@ main #cortina__index {
     margin-bottom: 15px;
 }
 
+.index__main button{
+    margin-bottom: -6rem;
+}
+
 @media screen and (min-width: 768px) {
 
     @keyframes zoomInDown {
@@ -651,6 +659,7 @@ main #cortina__index {
         border: none;
         padding: 0.75rem 1rem;
         border-radius: 5px;
+        margin: 0;
     }
 
     .index__main  .section__uno div a {
@@ -671,22 +680,22 @@ main #cortina__index {
     }
 
     .index__main .section__uno button[type= "button"] {
-        background-color: white;
-        color: black;
+        /* background-color: white;
+        color: black; */
         border: 1px solid black;
-        border-radius: 50px;
+        border-radius: 15px;
         width: 7rem;
         font-size: 14px;
         
     }
 
-    .index__main .section__uno button[type= "button"]:hover {
+    /*.index__main .section__uno button[type= "button"]:hover {
         cursor: pointer;
         font-size: 14px;
         transform: scale(1.1);
         background-color: #ECECEC;
 
-    }
+    } */
 
 }
 
@@ -1161,31 +1170,10 @@ main #cortina__index {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0;
     background-color: whitesmoke;
     width: 90%;
     margin: 2rem 0 4rem;
 
-}
-
-.main__nosotros .section__campoAlgodon .article__campoAlgodon,
-.main__nosotros .section__fabrica .article__fabrica  {
-    height: 100%;
-    width: 90%;
-}
-
-.main__nosotros .section__campoAlgodon .article__campoAlgodon .campo__algodon--img,
-.main__nosotros .section__fabrica .article__fabrica .fabrica__img {
-    max-width: 100%;
-    height: 100%;
-
-}
-
-
-.main__nosotros .section__campoAlgodon .descripcion__uno {
-    text-align: justify;
-    width: 90%;
-    background-color: white;
 }
 
 .main__nosotros .section__fabrica {
@@ -1194,32 +1182,14 @@ main #cortina__index {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 2rem 0;
     background-color: whitesmoke;
     width: 90%;
     margin: 0rem 0 4rem;
 
 }
 
-.main__nosotros .section__fabrica .descripcion__dos {
-    
-    text-align: justify;
-    width: 90%;
-    background-color: white;
-}
-
 @media screen and (min-width:768px) {
-    .main__nosotros .section__campoAlgodon .article__campoAlgodon,
-    .main__nosotros .section__fabrica .article__fabrica {
-        height: 40rem;
-    }
-
-    .main__nosotros .section__campoAlgodon .article__campoAlgodon .campo__algodon--img,
-    .main__nosotros .section__fabrica .article__fabrica .fabrica__img {
-        width: 100%;
-        height: 100%;
     
-    }
     
 }
 /* Fin Sobre Nosotros */
