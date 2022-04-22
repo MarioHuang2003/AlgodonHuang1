@@ -23,7 +23,9 @@ header{
     top: 0px;
     background: white;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    Z-index: 9999;
 }
+
 
 header .logo1{
     width: 5rem;
@@ -262,7 +264,14 @@ header .header__navegacion2 ul #nav__items5 a {
     header .header__navegacion #nav__items2 {
         padding: 0;
         position: relative;
-        width: 40%;
+        width: 35%;
+        border-radius: 15px;
+    }
+
+    header .header__navegacion #nav__items6 {
+        padding: 0;
+        position: relative;
+        width: 30%;
         border-radius: 15px;
     }
     
