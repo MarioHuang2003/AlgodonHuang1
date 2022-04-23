@@ -209,22 +209,207 @@ header .header__navegacion2 ul #nav__items5 a {
 
 }
 
+@media screen and (min-width: 800px){
+    header{
+        background-color: transparent ;
+        position: absolute;
+        display: grid;
+        grid-template-columns: repeat(2,50%);
+        grid-template-areas: "logo-header nav-header";
+    }
+
+    header:hover{
+        opacity: 1.5;
+    }
+
+    header .menu__header {
+        display: none;
+    }
+
+    header .div__header--menu .close__Menu{
+        display: none;
+    }
+
+    input#menu:checked ~ .div__header--menu{
+        display: inherit;
+    } 
+
+    header .div__navegacion{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+    }
+
+    header .div__header--menu {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        position: inherit;
+        background-color:#1D1D1D;
+    }
+
+    header .header__navegacion{
+        position: inherit;
+        height: auto;
+        width: 42%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin: 0;
+    }
+    
+    header .header__navegacion ul {
+        display: flex;
+        align-items: center;
+        flex-direction: row;
+        justify-content: inherit;
+        height: 100%;
+        width: 100%;
+    } 
+    header .header__navegacion #nav__items1 ul li {
+        border-radius: none;
+    } 
+
+    header .header__navegacion #nav__items1 ul li:hover {
+        background-color: #4C4C4C;
+    }
+    
+    header .header__navegacion ul li:hover, header .header__navegacion2 ul li:hover {
+        background-color: #4C4C4C;
+    }
+    
+    header .header__navegacion #nav__items1 {
+        padding: 0.5rem 1rem;
+        margin: 0 1rem 0 2rem;
+        position: relative;
+        border-radius: 15px;
+    }
+
+    header .header__navegacion #nav__items2 {
+        padding: 0;
+        position: relative;
+        border-radius: 15px;
+        margin-left: 0.5rem;
+        padding:0.5rem 1rem;
+    }
+    
+    header .header__navegacion2{
+        position: inherit;
+        height: 100%;
+        width: 58%;
+        justify-content: inherit;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+    }
+    
+    header .header__navegacion2 ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+    
+    header .header__navegacion2 ul #nav__items3{
+        padding: 0.5rem 1rem;
+        margin: 1.2rem 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        border-radius: 15px;
+    }
+    
+    header .header__navegacion ul li a {
+        color: white;
+        text-decoration-line: none;
+        padding: 0.5rem 0rem;
+        font-size: 16px;
+        font-weight: normal;
+    }
+    
+    header .header__navegacion2 ul li a {
+        color: white;
+        text-decoration-line: none;
+        font-weight: normal;
+        font-size: 16px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    header .header__navegacion #nav__items1:hover > ul {
+        display: flex;
+    }
+
+    header .header__navegacion #nav__items1 ul{
+        display: flex;
+        flex-direction: column;
+        font-weight: 400;
+        font-size: 16px;
+    }
+    
+    header .header__navegacion #nav__items1 ul {
+        display: none;
+        position: absolute;
+        left: 0;
+        top: 40px;
+        padding: 0.5rem;
+        height: 10rem;
+        background-color: #4C4C4C;
+        border-radius: 3px; 
+    }
+    
+    header .header__navegacion2 ul #nav__items5 {
+        height: 40px;
+        align-self: center;
+        width: 9rem;
+    }
+
+    header .header__navegacion2 ul #nav__items4 {
+        height: 40px;
+        align-self: center;
+        width: 80px;
+    }
+
+    @media screen and (max-width: 1050px){
+
+        header .header__navegacion #nav__items1 {
+            margin: 0 7px 0 1rem;
+        }
+
+        header .header__navegacion ul li a {
+            font-size: 12px;
+        }
+        
+        header .header__navegacion2 ul li a {
+            font-size: 12px;
+        }
+
+        header .header__navegacion2 ul #nav__items4 a {
+            font-size: 12px;
+
+        }
+
+        header .header__navegacion2 ul #nav__items5 a {
+            font-size: 12px;
+        }
+    }
+
+}
+
 /* Fin header */
-/* ---------------------------------------------------- */
-/* footer */
-
-
-/* Fin footer */
 /* ---------------------------------------------------- */
 /* main index */
 
 .main__contacto {
     display: grid;
-    grid-template-rows: 50% repeat(2, 1fr);
+    grid-template-rows: 45% 40% 5% 10%;
     grid-template-areas: 
     "cuadro6"
     "arcContacto"
-    "socialMedia";
+    "socialMedia"
+    "sobreNosotros";
 }
 
 .div__cuarto6{
@@ -232,9 +417,15 @@ header .header__navegacion2 ul #nav__items5 a {
 }
 .article__contacto{
     grid-area: arcContacto;
+    max-width: 100%;
 }
 .social__media{
     grid-area: socialMedia;
+    max-width: 100%;
+}
+.sobre__nosotros{
+    grid-area: sobreNosotros;
+    max-width: 100%;
 }
 .main__contacto .div__cuarto6{
     max-width: 100%;
@@ -248,18 +439,40 @@ header .header__navegacion2 ul #nav__items5 a {
 .main__contacto .article__contacto{
     background-color: #1D1D1D;
     color: white;
-    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    border-top: 1px solid gray;
+}
+
+.main__contacto .article__contacto h1{
+    font-family: Arial Unicode MS;
+    font-size: 70px;
+    padding: 1.5rem 0 0.5rem;
+    font-weight: lighter;
+}
+.main__contacto .article__contacto h2{
+    font-family: Arial light;
+    font-size: 20px;
+    font-weight: lighter;
+}
+.main__contacto .article__contacto h3{
+    font-family: Arial Unicode MS;
+    font-size: 13px;
+    font-weight: lighter;
+}
+
+.main__contacto .article__contacto div {
+    padding: 1rem 0 2.5rem;
 }
 
 .main__contacto .social__media {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 2.5rem 0 1rem;
+    padding: 1rem 0 1rem;
     background-color: #1D1D1D;
 }
 
-.main__contacto .social__media a {
+.main__contacto .social__media i {
   font-size: 2rem;
   width: 3rem;
   height: 3rem;
@@ -274,10 +487,118 @@ header .header__navegacion2 ul #nav__items5 a {
   transition: all 0.5s ease-in;
 }
 
-.main__contacto .social__media a:hover {
+.main__contacto .social__media i:hover {
     color: white;
     background-color: black;
     transform: scale(1.1) translateY(-5px);
     width: 3rem;
     height: 3rem;
+}
+
+ .main__contacto .sobre__nosotros {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    background-color: #1D1D1D;
+    border-top: 1px solid grey;
+}
+
+.main__contacto .sobre__nosotros ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 0.5rem 0rem; 
+}
+
+.main__contacto .sobre__nosotros ul a {
+    color: white;
+    text-decoration-line: none;
+    font-weight: 600;
+    font-size: 17px;
+}
+
+.main__contacto .sobre__nosotros ul li ul li a {
+    font-weight: 400;
+    font-size: 13px;
+}
+
+@media screen and (min-width: 800px) {
+
+    .main__contacto {
+        display: grid;
+        grid-template: 37rem 6rem 8rem  / repeat(2,50%);
+        grid-template-areas: 
+        "cuadro6 arcContacto"
+        "cuadro6 socialMedia"
+        "cuadro6 sobreNosotros";
+        background-color: #1D1D1D;
+    }
+    .main__contacto .article__contacto{
+        background-color: #1D1D1D;
+        text-align:left;
+        padding: 4.5rem 0 0 7rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+        
+    .main__contacto .article__contacto h1{
+        font-family: serif;
+        font-size: 150px;
+        padding: 1.5rem 0 0.5rem;
+    }
+    .main__contacto .article__contacto h2{
+        font-family: Arial Unicode MS;
+        font-size: 20px;
+    }
+    .main__contacto .article__contacto h3{
+        font-family: Arial Unicode MS;
+        font-size: 13px;
+    }
+
+    .main__contacto .article__contacto div {
+        padding: 1rem 0 0;
+    }
+
+    .main__contacto .social__media {
+        padding: 0;
+    }
+
+    .main__contacto .sobre__nosotros {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #1D1D1D;
+        border-top: 1px solid grey;
+        align-self: center;
+        margin: 0;
+        padding: 0;
+    }
+
+    .main__contacto .sobre__nosotros ul{
+        align-items: flex-start;
+    }
+
+    @media screen and (max-width: 1250px){
+
+        .main__contacto .article__contacto{
+            padding: 4.5rem 0 0 5rem;
+        }
+
+        .main__contacto .article__contacto h1{
+            font-size: 120px;
+        }
+    }
+
+    @media screen and (max-width: 940px){
+
+        .main__contacto .article__contacto{
+            padding: 4.5rem 0 0 4rem;
+        }
+
+        .main__contacto .article__contacto h1{
+            font-size: 100px;
+        }
+    }
+
 }
