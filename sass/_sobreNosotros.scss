@@ -30,6 +30,10 @@
     
     }
 
+    .section__fabrica{
+        @extend .section__campoAlgodon
+    }
+
     .main__nosotros .section__fabrica {
         width: 80%;
         height: 80%;

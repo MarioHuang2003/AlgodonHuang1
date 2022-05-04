@@ -1061,7 +1061,7 @@ footer {
     text-align: center;
     margin: 3rem 0 2rem;
     font-size: 40px; }
-  .main__nosotros .section__campoAlgodon {
+  .main__nosotros .section__campoAlgodon, .main__nosotros .section__fabrica {
     width: 80%;
     height: 80%;
     display: flex;
