@@ -783,29 +783,32 @@ footer {
           font-size: 30px;
           padding: 1rem 0;
           margin-bottom: 1.5rem; } }
-    .main__locales .section__locales--dos .article__palermo, .main__locales .section__locales--dos .article__abasto {
+    .main__locales .section__locales--dos .article__palermo {
       display: flex;
       flex-direction: column;
       align-items: center;
       border: 1px solid black;
       width: 100%;
+      text-transform: uppercase;
+      color: black;
+      background-color: whitesmoke;
       margin-bottom: 1rem; }
       @media screen and (min-width: 768px) {
-        .main__locales .section__locales--dos .article__palermo, .main__locales .section__locales--dos .article__abasto {
+        .main__locales .section__locales--dos .article__palermo {
           width: 45%;
           margin-bottom: 0;
           margin-right: 0.75rem; } }
-      .main__locales .section__locales--dos .article__palermo .mapa__palermo, .main__locales .section__locales--dos .article__abasto .mapa__palermo, .main__locales .section__locales--dos .article__abasto .mapa__abasto {
+      .main__locales .section__locales--dos .article__palermo .mapa__palermo {
         width: 100%;
         height: 20rem;
         border-bottom: 1px solid black; }
         @media screen and (min-width: 768px) {
-          .main__locales .section__locales--dos .article__palermo .mapa__palermo, .main__locales .section__locales--dos .article__abasto .mapa__palermo, .main__locales .section__locales--dos .article__abasto .mapa__abasto {
+          .main__locales .section__locales--dos .article__palermo .mapa__palermo {
             height: 26rem; } }
-        .main__locales .section__locales--dos .article__palermo .mapa__palermo iframe, .main__locales .section__locales--dos .article__abasto .mapa__palermo iframe, .main__locales .section__locales--dos .article__abasto .mapa__abasto iframe {
+        .main__locales .section__locales--dos .article__palermo .mapa__palermo iframe {
           width: 100%;
           height: 100%; }
-      .main__locales .section__locales--dos .article__palermo .palermo__letra, .main__locales .section__locales--dos .article__abasto .palermo__letra, .main__locales .section__locales--dos .article__abasto .abasto__letra {
+      .main__locales .section__locales--dos .article__palermo .palermo__letra {
         font-size: 16px;
         font-weight: 300;
         text-align: center;
@@ -813,24 +816,77 @@ footer {
         color: white;
         height: 160px;
         width: 100%; }
-        .main__locales .section__locales--dos .article__palermo .palermo__letra h4, .main__locales .section__locales--dos .article__abasto .palermo__letra h4, .main__locales .section__locales--dos .article__abasto .abasto__letra h4 {
+        .main__locales .section__locales--dos .article__palermo .palermo__letra h4 {
           font-size: 30px;
           font-weight: 600;
           text-align: center; }
-        .main__locales .section__locales--dos .article__palermo .palermo__letra a, .main__locales .section__locales--dos .article__abasto .palermo__letra a, .main__locales .section__locales--dos .article__abasto .abasto__letra a {
+        .main__locales .section__locales--dos .article__palermo .palermo__letra a {
           display: flex;
           flex-direction: column;
           align-items: center;
           align-content: center;
           text-decoration-line: none; }
-          .main__locales .section__locales--dos .article__palermo .palermo__letra a button, .main__locales .section__locales--dos .article__abasto .palermo__letra a button, .main__locales .section__locales--dos .article__abasto .abasto__letra a button {
+          .main__locales .section__locales--dos .article__palermo .palermo__letra a button {
             padding: 0.3rem;
             margin: 0.5rem;
             text-transform: uppercase;
             border: 1px solid gray;
             border-radius: 50px;
             background-color: white; }
-            .main__locales .section__locales--dos .article__palermo .palermo__letra a button:hover, .main__locales .section__locales--dos .article__abasto .palermo__letra a button:hover, .main__locales .section__locales--dos .article__abasto .abasto__letra a button:hover {
+            .main__locales .section__locales--dos .article__palermo .palermo__letra a button:hover {
+              border: 3px solid white;
+              font-weight: 700; }
+    .main__locales .section__locales--dos .article__abasto {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid black;
+      width: 100%;
+      text-transform: uppercase;
+      color: black;
+      background-color: whitesmoke;
+      margin-bottom: 1rem; }
+      @media screen and (min-width: 768px) {
+        .main__locales .section__locales--dos .article__abasto {
+          width: 45%;
+          margin-bottom: 0;
+          margin-right: 0.75rem; } }
+      .main__locales .section__locales--dos .article__abasto .mapa__abasto {
+        width: 100%;
+        height: 20rem;
+        border-bottom: 1px solid black; }
+        @media screen and (min-width: 768px) {
+          .main__locales .section__locales--dos .article__abasto .mapa__abasto {
+            height: 26rem; } }
+        .main__locales .section__locales--dos .article__abasto .mapa__abasto iframe {
+          width: 100%;
+          height: 100%; }
+      .main__locales .section__locales--dos .article__abasto .abasto__letra {
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        background-color: #201f1f;
+        color: white;
+        height: 160px;
+        width: 100%; }
+        .main__locales .section__locales--dos .article__abasto .abasto__letra h4 {
+          font-size: 30px;
+          font-weight: 600;
+          text-align: center; }
+        .main__locales .section__locales--dos .article__abasto .abasto__letra a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          text-decoration-line: none; }
+          .main__locales .section__locales--dos .article__abasto .abasto__letra a button {
+            padding: 0.3rem;
+            margin: 0.5rem;
+            text-transform: uppercase;
+            border: 1px solid gray;
+            border-radius: 50px;
+            background-color: white; }
+            .main__locales .section__locales--dos .article__abasto .abasto__letra a button:hover {
               border: 3px solid white;
               font-weight: 700; }
   .main__locales .section__locales--tres {
@@ -864,32 +920,32 @@ footer {
           font-size: 30px;
           padding: 1rem 0;
           margin-bottom: 1.5rem; } }
-    .main__locales .section__locales--tres .article__shanhai, .main__locales .section__locales--tres .article__pekin {
+    .main__locales .section__locales--tres .article__shanhai {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid black;
       width: 100%;
       text-transform: uppercase;
       color: black;
-      text-align: center;
-      font-weight: 400;
-      font-size: 15px;
-      padding: 0.5rem 0;
       background-color: whitesmoke;
       margin-bottom: 1rem; }
       @media screen and (min-width: 768px) {
-        .main__locales .section__locales--tres .article__shanhai, .main__locales .section__locales--tres .article__pekin {
+        .main__locales .section__locales--tres .article__shanhai {
           width: 45%;
           margin-bottom: 0;
           margin-right: 0.75rem; } }
-      .main__locales .section__locales--tres .article__shanhai .mapa__shanhai, .main__locales .section__locales--tres .article__pekin .mapa__shanhai, .main__locales .section__locales--tres .article__pekin .mapa__pekin {
+      .main__locales .section__locales--tres .article__shanhai .mapa__shanhai {
         width: 100%;
         height: 20rem;
         border-bottom: 1px solid black; }
         @media screen and (min-width: 768px) {
-          .main__locales .section__locales--tres .article__shanhai .mapa__shanhai, .main__locales .section__locales--tres .article__pekin .mapa__shanhai, .main__locales .section__locales--tres .article__pekin .mapa__pekin {
+          .main__locales .section__locales--tres .article__shanhai .mapa__shanhai {
             height: 26rem; } }
-        .main__locales .section__locales--tres .article__shanhai .mapa__shanhai iframe, .main__locales .section__locales--tres .article__pekin .mapa__shanhai iframe, .main__locales .section__locales--tres .article__pekin .mapa__pekin iframe {
+        .main__locales .section__locales--tres .article__shanhai .mapa__shanhai iframe {
           width: 100%;
           height: 100%; }
-      .main__locales .section__locales--tres .article__shanhai .shanhai__letra, .main__locales .section__locales--tres .article__pekin .shanhai__letra, .main__locales .section__locales--tres .article__pekin .pekin__letra {
+      .main__locales .section__locales--tres .article__shanhai .shanhai__letra {
         font-size: 16px;
         font-weight: 300;
         text-align: center;
@@ -897,24 +953,77 @@ footer {
         color: white;
         height: 160px;
         width: 100%; }
-        .main__locales .section__locales--tres .article__shanhai .shanhai__letra h4, .main__locales .section__locales--tres .article__pekin .shanhai__letra h4, .main__locales .section__locales--tres .article__pekin .pekin__letra h4 {
+        .main__locales .section__locales--tres .article__shanhai .shanhai__letra h4 {
           font-size: 30px;
           font-weight: 600;
           text-align: center; }
-        .main__locales .section__locales--tres .article__shanhai .shanhai__letra a, .main__locales .section__locales--tres .article__pekin .shanhai__letra a, .main__locales .section__locales--tres .article__pekin .pekin__letra a {
+        .main__locales .section__locales--tres .article__shanhai .shanhai__letra a {
           display: flex;
           flex-direction: column;
           align-items: center;
           align-content: center;
           text-decoration-line: none; }
-          .main__locales .section__locales--tres .article__shanhai .shanhai__letra a button, .main__locales .section__locales--tres .article__pekin .shanhai__letra a button, .main__locales .section__locales--tres .article__pekin .pekin__letra a button {
+          .main__locales .section__locales--tres .article__shanhai .shanhai__letra a button {
             padding: 0.3rem;
             margin: 0.5rem;
             text-transform: uppercase;
             border: 1px solid gray;
             border-radius: 50px;
             background-color: white; }
-            .main__locales .section__locales--tres .article__shanhai .shanhai__letra a button:hover, .main__locales .section__locales--tres .article__pekin .shanhai__letra a button:hover, .main__locales .section__locales--tres .article__pekin .pekin__letra a button:hover {
+            .main__locales .section__locales--tres .article__shanhai .shanhai__letra a button:hover {
+              border: 3px solid white;
+              font-weight: 700; }
+    .main__locales .section__locales--tres .article__pekin {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid black;
+      width: 100%;
+      text-transform: uppercase;
+      color: black;
+      background-color: whitesmoke;
+      margin-bottom: 1rem; }
+      @media screen and (min-width: 768px) {
+        .main__locales .section__locales--tres .article__pekin {
+          width: 45%;
+          margin-bottom: 0;
+          margin-right: 0.75rem; } }
+      .main__locales .section__locales--tres .article__pekin .mapa__pekin {
+        width: 100%;
+        height: 20rem;
+        border-bottom: 1px solid black; }
+        @media screen and (min-width: 768px) {
+          .main__locales .section__locales--tres .article__pekin .mapa__pekin {
+            height: 26rem; } }
+        .main__locales .section__locales--tres .article__pekin .mapa__pekin iframe {
+          width: 100%;
+          height: 100%; }
+      .main__locales .section__locales--tres .article__pekin .pekin__letra {
+        font-size: 16px;
+        font-weight: 300;
+        text-align: center;
+        background-color: #201f1f;
+        color: white;
+        height: 160px;
+        width: 100%; }
+        .main__locales .section__locales--tres .article__pekin .pekin__letra h4 {
+          font-size: 30px;
+          font-weight: 600;
+          text-align: center; }
+        .main__locales .section__locales--tres .article__pekin .pekin__letra a {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          align-content: center;
+          text-decoration-line: none; }
+          .main__locales .section__locales--tres .article__pekin .pekin__letra a button {
+            padding: 0.3rem;
+            margin: 0.5rem;
+            text-transform: uppercase;
+            border: 1px solid gray;
+            border-radius: 50px;
+            background-color: white; }
+            .main__locales .section__locales--tres .article__pekin .pekin__letra a button:hover {
               border: 3px solid white;
               font-weight: 700; }
   .main__locales .tienda__to--top {
