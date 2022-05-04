@@ -1,0 +1,221 @@
+/* ---------------------------------------------------- */
+/* main index */
+
+@keyframes zoomInDown {
+    0% {
+      opacity: 0;
+      transform: scale3d(0.1, 0.1, 0.1) translate3d(0, -1000px, 0);
+      animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    }
+    60% {
+      opacity: 1;
+      transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    }
+}
+
+.index__main {
+    display: grid;
+    justify-items: center;
+
+    .div__sofa4{
+        width: 100%;
+        img{
+            width: 100%;
+        }
+    }
+
+    h2{
+        font-family: Comic Sans MS;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 15px;
+        text-transform: uppercase;
+        color: white;
+        background: rgba(0, 0, 0, 0.3);
+        padding: 5px 0;
+        width: 100%;
+        text-align: center;
+        margin: 1rem 0;
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                font-weight: 700;
+                font-size: 2rem;
+                padding: 1rem 0;
+                animation-name: zoomInDown;
+                animation-duration: 1s;
+            }
+        }
+    }
+
+    .section__uno {
+        margin: 1rem;
+        padding: 1rem 2rem;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        display: grid;
+        align-items: center;
+        text-align: center;
+        grid-template: repeat(4, 1fr) / 1fr;
+        grid-template-areas:
+        "div1"
+        "div2"
+        "almohada-main"
+        "cortina-main";
+        width: 100%;
+        height: 100%;
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                grid-template: repeat(3, 1fr) / repeat(2, 1fr);
+                grid-template-areas:
+                "div1 div1"
+                "div2 div2"
+                "almohada-main cortina-main";
+            }
+        }
+        .div__uno {
+        grid-area: div1;
+        }
+    
+        .div__dos {
+            grid-area: div2;
+        }
+        
+        #almohada__index {
+            grid-area: almohada-main;
+        }
+        
+        #cortina__index {
+            grid-area: cortina-main;
+        }
+
+        .div__uno{
+            width: 100%;
+            height: 300px;
+            background-image: url("../fotos/campos-del-algodón.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    width: 100%;
+                    height: 500px;
+                    justify-content:flex-end;
+                }
+            }
+
+            a{
+                padding: 1rem 1rem 1rem;
+                margin: 1rem 0 1.5rem;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                align-content: center;
+                text-decoration-line: none;
+            }
+        }
+
+        .div__dos{
+            @extend .div__uno;
+            background-image: url("../fotos/cosechaAlgodon.jpeg");
+            margin: 5px 0px 10px;
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    width: 100%;
+                    height: 500px;
+                    justify-content:flex-end;
+                    margin: 15px 0px 35px;
+                }
+            }
+        }
+
+        #almohada__index {
+            width: 100%;
+            height: 300px;
+            background-image: url("../fotos/almohada-menu.jpg");
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: center;
+            box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    width: 100%;
+                    height: 500px;
+                    justify-content:flex-end;
+                    margin-bottom: 15px;
+                }
+            }
+            a{
+                text-decoration-line: none;
+            }
+            button{
+                margin: 0 4em 2rem;
+            }
+        }
+        
+        #cortina__index {
+            @extend  #almohada__index;
+            background-image: url("../fotos/cortina-home.jpg");
+            margin-bottom: 15px;
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    width: 100%;
+                    height: 500px;
+                    justify-content:flex-end;
+                }
+            }
+        }
+
+        button {
+            margin-bottom: -6rem;
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    padding: 0.75rem 1rem;
+                    border-radius: 10px;
+                    margin: 0;
+                    border: 1px solid black;
+                    width: 7rem;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .tienda__to--top {
+        background-color: white;
+        height: 4rem;
+        width: 4rem;
+        display: flex;
+        font-size: 3rem;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 3rem;
+        right: 1rem;
+        i {
+            color: black;
+        }
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                right: 3rem;
+            }
+        }
+    }
+}

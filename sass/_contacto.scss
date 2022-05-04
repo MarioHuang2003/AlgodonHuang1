@@ -1,0 +1,676 @@
+/* ---------------------------------------------------- */
+/* contacto */
+/* ---------------------------------------------------- */
+/* contacto header */
+.header__contacto{
+    width: 100%;
+    background-color: #1D1D1D ;
+    Z-index: 9999;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-areas: "logo-header nav-header";
+    padding: 0;
+    @media screen and (min-width:800px){
+        $vista: tablet;
+        @if $vista == tablet {
+            background-color: transparent ;
+            position: absolute;
+            display: grid;
+            grid-template-columns: repeat(2,50%);
+            grid-template-areas: "logo-header nav-header";
+            &:hover{
+                opacity: 1.5;
+            }
+            box-shadow: none;
+        }
+    
+    }
+
+    .logo1{
+        grid-area: logo-header;
+        margin-left: 2rem;
+        width: 5rem;
+        .img1 {
+            width: 100%;
+            height: 100%;
+            &:hover{
+                transform:translateX(1.5rem);
+                transition: 1.5s;
+            }
+        }
+    }
+
+    .div__navegacion{
+        grid-area: nav-header;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-end;
+        height: 100%;
+        @media screen and (min-width:800px){
+            $vista: tablet;
+            @if $vista == tablet {
+                justify-content: center;
+                width: 100%;
+            }
+        }
+
+        .menu__header{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 2.5rem;
+            font-size: 2rem;
+            background-color: transparent;
+            border: none;
+            transition: box-shadow 0.5s ease-in;
+            height: 100%;
+            color: #c2c2c2;
+            margin-right: 1.5rem;
+            @media screen and (min-width:800px){
+                $vista: tablet;
+                @if $vista == tablet {
+                    display: none;
+                }
+            }
+        }
+        input#menu {
+        display: none;
+        &:checked ~ .nav__header--menu{
+            display: block;
+            @media screen and (min-width:800px){
+                $vista: tablet ;
+                @if $vista == tablet {
+                    display: inherit;
+                }
+            }
+        } 
+    }
+
+        .nav__header--menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%; 
+            height: 100%;
+            background-color: $colorHeaderprincipal;
+            @media screen and (min-width:800px){
+                $vista: tablet;
+                @if $vista == tablet  {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    position: inherit;
+                    background-color: transparent;
+                }
+            }
+            .close__Menu {
+                position: absolute;
+                top: 1rem;
+                right: 1rem;
+                font-size: 1.5rem;
+                @media screen and (min-width:800px){
+                    $vista: tablet;
+                    @if $vista == tablet {
+                        display: none;
+                    }
+                }
+            }
+
+            .header__navegacion {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                height: 40%;
+                width: 100%;
+                margin: 60px 0 2rem;
+                @media screen and (min-width:800px){
+                    $vista: tablet;
+                    @if $vista == tablet {
+                        position: inherit;
+                        height: auto;
+                        width: 42%;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                        margin: 0;
+                    }
+                }
+                ul{
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    height: 100%;
+                    width: 100%;
+                    padding: 0;
+                    margin-bottom: 0;
+                    @media screen and (min-width:800px){
+                        $vista: tablet;
+                        @if $vista == tablet {
+                            display: flex;
+                            align-items: center;
+                            flex-direction: row;
+                            justify-content: inherit;
+                            height: 100%;
+                            width: 100%;
+                        }
+                    }
+                    li {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        @media screen and (min-width:800px){
+                            $vista: tablet;
+                            @if $vista == tablet {
+                                &:hover{
+                                    background-color: $colorHeaderHover;
+                                }
+                            }
+                        }
+                        a {
+                            color: white;
+                            text-decoration-line: none;
+                            font-size: 25px;
+                            font-weight: 600;
+                            @media screen and (min-width:800px){
+                                $vista: tablet;
+                                @if $vista == tablet {
+                                    color: white;
+                                    text-decoration-line: none;
+                                    padding: 0.5rem 0rem;
+                                    font-size: 16px;
+                                    font-weight: normal;
+                                }
+                            }
+                            @media screen and (max-width:1050px){
+                                $vista: desktop;
+                                @if $vista == desktop {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                        ul{
+                            @media screen and (min-width:800px){
+                                $vista: tablet;
+                                @if $vista == tablet {
+                                    display: none;
+                                    position: absolute;
+                                    left: 0;
+                                    top: 40px;
+                                    padding: 0.5rem;
+                                    height: 10rem;
+                                    background-color: #4C4C4C;
+                                    border-radius: 3px; 
+                                    flex-direction: column;
+                                    font-weight: 400;
+                                    font-size: 16px;
+                                }
+                            }
+                            li{
+                                @media screen and (min-width:800px){
+                                    $vista: tablet;
+                                    @if $vista == tablet {
+                                        &:hover{
+                                            background-color: $colorHeaderHover;
+                                        }
+                                    }
+                                }
+                                a{
+                                    font-size: 15px;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                    #nav__items1 {
+                        @media screen and (min-width:800px){
+                            $vista: tablet;
+                            @if $vista == tablet {
+                                padding: 0.5rem 1rem;
+                                margin: 0 1rem 0 2rem;
+                                position: relative;
+                                border-radius: 15px;
+                                &:hover > ul {
+                                    display: flex;
+                                }
+                            }
+                        }
+                        @media screen and (max-width:1050px){
+                            $vista: desktop;
+                            @if $vista == desktop {
+                                margin: 0 7px 0 1rem;
+                            }
+                        }
+                    }
+                    #nav__items2 {
+                        @media screen and (min-width:800px){
+                            $vista: tablet;
+                            @if $vista == tablet {
+                                padding: 0;
+                                position: relative;
+                                border-radius: 15px;
+                                margin-left: 0.5rem;
+                                padding:0.5rem 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .header__navegacion2 {
+                display: grid;
+                justify-content: center;
+                @media screen and (min-width:800px){
+                    $vista: tablet;
+                    @if $vista == tablet {
+                        position: inherit;
+                        height: 100%;
+                        width: 58%;
+                        justify-content: inherit;
+                        display: flex;
+                        flex-direction: row;
+                        align-items: center;
+                    }
+                }
+                ul{
+                    width: 100%;
+                    display: grid;
+                    grid-template: repeat(2, 1fr) / repeat(2, 1fr);
+                    grid-template-areas: 
+                    "items3 items3"
+                    "items4 items5";
+                    padding: 0;
+                    margin-bottom: 0;
+                    @media screen and (min-width:800px){
+                        $vista: tablet;
+                        @if $vista == tablet {
+                            display: flex;
+                            flex-direction: row;
+                            justify-content: flex-end;
+                        }
+                    }
+
+                    li{
+                        @media screen and (min-width:800px){
+                            $vista: tablet;
+                            @if $vista == tablet {
+                                &:hover{
+                                    background-color: $colorHeaderHover;
+                                }
+                            }
+                        }
+                        a{
+                            @media screen and (min-width:800px){
+                                $vista: tablet;
+                                @if $vista == tablet {
+                                    color: white;
+                                    text-decoration-line: none;
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                            @media screen and (max-width:1050px){
+                                $vista: desktop;
+                                @if $vista == desktop {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    #nav__items3 {
+                        grid-area: items3;
+                        display: flex;
+                        text-align: center;
+                        justify-content: center;
+                        @media screen and (min-width:800px){
+                            $vista: tablet;
+                            @if $vista == tablet {
+                                padding: 0.5rem 1rem;
+                                margin: 1.2rem 1rem;
+                                display: flex;
+                                flex-direction: column;
+                                justify-content: center;
+                                border-radius: 15px;
+                            }
+                        }
+
+                        a {
+                            color: white;
+                            text-decoration-line: none;
+                            font-size: 25px;
+                            font-weight: 600;
+                            @media screen and (min-width:800px){
+                                $vista: tablet;
+                                @if $vista == tablet {
+                                    color: white;
+                                    text-decoration-line: none;
+                                    font-weight: normal;
+                                    font-size: 16px;
+                                    width: 100%;
+                                    display: flex;
+                                    justify-content: center;
+                                    align-items: center;
+                                }
+                            }
+                            @media screen and (max-width:1050px){
+                                $vista: desktop;
+                                @if $vista == desktop {
+                                    font-size: 12px;
+                                }
+                            }
+                        }  
+                    }
+                    
+                    #nav__items4{
+                        grid-area: items4;
+                        border: 2px solid black;
+                        display: flex;
+                        align-self: center;
+                        background-color: black; 
+                        border-radius: 50px;
+                        text-align: center;
+                        width: 100%;
+                        cursor: pointer;
+                        padding: 5px 10px;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-right: 5px;
+                        @media screen and (min-width:800px){
+                            $vista: tablet;
+                            @if $vista == tablet {
+                                height: 40px;
+                                align-self: center;
+                                width: 80px;
+                            }
+                        }
+                        &:hover {
+                            background-color: gray;
+                        }
+
+                        a{
+                            color: #ffffff; 
+                            font-size: 15px;
+                            text-align: center;
+                            text-decoration-line: none;
+                            @media screen and (max-width:1050px){
+                                $vista: desktop;
+                                @if $vista == desktop {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                    
+                    #nav__items5{
+                        grid-area: items5;
+                        border: 1px solid gray;
+                        display: flex;
+                        background-color: white; 
+                        border-radius: 50px;
+                        text-align: center;
+                        width: 100%;
+                        cursor: pointer;
+                        padding: 5px;
+                        flex-direction: row;
+                        justify-content: center;
+                        margin-left: 5px;
+                        @media screen and (min-width:800px){
+                            $vista: tablet;
+                            @if $vista == tablet {
+                                height: 40px;
+                                align-self: center;
+                                width: 9rem;
+                            }
+                        }
+                        &:hover{
+                            border: 2px solid black;
+                        }
+
+                        a {
+                            color: black;
+                            font-size: 15px;
+                            text-decoration-line: none; 
+                            @media screen and (max-width:1050px){
+                                $vista: desktop;
+                                @if $vista == desktop {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* Fin contacto header */
+/* ---------------------------------------------------- */
+/* main contacto */
+.main__contacto {
+    display: grid;
+    grid-template-rows: 45% 40% 5% 10%;
+    grid-template-areas: 
+    "cuadro6"
+    "arcContacto"
+    "socialMedia"
+    "sobreNosotros";
+    @media screen and (min-width:800px){
+        $vista: tablet;
+        @if $vista == tablet {
+            display: grid;
+            grid-template: 37rem 6rem 8rem  / repeat(2,50%);
+            grid-template-areas: 
+            "cuadro6 arcContacto"
+            "cuadro6 socialMedia"
+            "cuadro6 sobreNosotros";
+            background-color: #1D1D1D;
+        }
+    }
+
+    .div__cuarto6{
+        grid-area: cuadro6;
+        max-width: 100%;
+        img{
+            width: 100%;
+            height: 100%;
+        }
+    }
+    .article__contacto{
+        grid-area: arcContacto;
+        max-width: 100%;
+        background-color: #1D1D1D;
+        color: white;
+        text-align: center;
+        border-top: 1px solid gray;
+        @media screen and (min-width:800px){
+            $vista: tablet;
+            @if $vista == tablet {
+                background-color: #1D1D1D;
+                text-align:left;
+                padding: 4.5rem 0 0 7rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+        @media screen and (max-width:1250px){
+            $vista: granDesktop;
+            @if $vista == granDesktop {
+                padding: 4.5rem 0 0 5rem;
+            }
+        }
+        @media screen and (max-width:940px){
+            $vista: granTablet;
+            @if $vista == granTablet {
+                padding: 4.5rem 0 0 4rem;
+            }
+        }
+        @media screen and (max-width:800px){
+            $vista: phone;
+            @if $vista == phone {
+                padding: 0;
+            }
+        }
+        h1{
+            font-family: Arial Unicode MS;
+            font-size: 70px;
+            padding: 1.5rem 0 0.5rem;
+            font-weight: lighter;
+            @media screen and (min-width:800px){
+                $vista: tablet;
+                @if $vista == tablet {
+                    font-family: serif;
+                    font-size: 150px;
+                    padding: 1.5rem 0 0.5rem;
+                }
+            }
+            @media screen and (max-width:1250px){
+                $vista: granDesktop;
+                @if $vista == granDesktop {
+                    font-size: 120px;
+                }
+            }
+            @media screen and (max-width:940px){
+                $vista: granTablet;
+                @if $vista == granTablet {
+                    font-size: 100px;
+                }
+            }
+            @media screen and (max-width:370px){
+                $vista: phone;
+                @if $vista == phone {
+                    font-size: 75px;
+                }
+            }
+        }
+        h2{
+            font-family: Arial light;
+            font-size: 20px;
+            font-weight: lighter;
+            @media screen and (min-width:800px){
+                $vista: tablet;
+                @if $vista == tablet {
+                    font-family: Arial Unicode MS;
+                    font-size: 20px;
+                }
+            }
+        }
+        div {
+            padding: 1rem 0 2.5rem;
+            @media screen and (min-width:800px){
+                $vista: tablet;
+                @if $vista == tablet {
+                    padding: 1rem 0 0;
+                }
+            }
+            h3{
+                font-family: Arial Unicode MS;
+                font-size: 13px;
+                font-weight: lighter;
+                @media screen and (min-width:800px){
+                    $vista: tablet;
+                    @if $vista == tablet {
+                        font-family: Arial Unicode MS;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+    .social__media{
+        grid-area: socialMedia;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        padding: 1rem 0 1rem;
+        background-color: #1D1D1D;
+        @media screen and (min-width:800px){
+            $vista: tablet;
+            @if $vista == tablet {
+                padding: 0;
+            }
+        }
+        i {
+            font-size: 2rem;
+            width: 3rem;
+            height: 3rem;
+            color: white;
+            background-color: black;
+            border-radius: 50%;
+            text-decoration-line: none;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: 0.75rem;
+            transition: all 0.5s ease-in;
+            &:hover {
+                color: white;
+                background-color: black;
+                transform: scale(1.1) translateY(-5px);
+                width: 3rem;
+                height: 3rem;
+            }
+          }
+    }
+    .sobre__nosotros{
+        grid-area: sobreNosotros;
+        max-width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        background-color: #1D1D1D;
+        border-top: 1px solid grey;
+        @media screen and (min-width:800px){
+            $vista: tablet;
+            @if $vista == tablet {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-evenly;
+                background-color: #1D1D1D;
+                border-top: 1px solid grey;
+                align-self: center;
+                margin: 0;
+                padding: 0;
+            }
+        }
+        ul{
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            padding: 0.5rem 0rem; 
+            @media screen and (min-width:800px){
+                $vista: tablet;
+                @if $vista == tablet {
+                    align-items: flex-start;
+                }
+            }
+            li{
+                a {
+                    color: white;
+                    text-decoration-line: none;
+                    font-weight: 600;
+                    font-size: 17px;
+                }
+                ul{
+                    li{
+                        a{
+                            font-weight: 400;
+                            font-size: 13px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+/* Fin main contacto */
+/* ---------------------------------------------------- */
+/* Fin contacto */

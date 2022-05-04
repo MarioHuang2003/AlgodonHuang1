@@ -1,0 +1,30 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Comic Sans MS;
+    scroll-behavior: smooth;
+}
+body{
+    background-color: white;
+}
+
+$colorHeaderprincipal: #1d1d1d;
+$colorHeaderHover:#4C4C4C;
+
+@import "headerFooter.scss";
+
+@import "index.scss";
+
+@import "registrar.scss";
+
+@import "iniciar.scss";
+
+@import "locales.scss";
+
+@import "sobreNosotros.scss";
+
+@import "tienda.scss";
+
+@import "contacto.scss";
+

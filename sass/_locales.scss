@@ -1,0 +1,305 @@
+/* ---------------------------------------------------- */
+/* Locales */
+
+$vista: mobile;
+
+.main__locales {
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    grid-template-rows: 100px 1fr 1fr;
+    width: 100%;
+    @media screen and (min-width:768px){
+        $vista: desktop;
+        @if $vista == desktop {
+            grid-template-rows: 162px 1fr 1fr;
+        }
+    }
+
+    .section__locales--uno{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+
+        .div__nuestros--locales {
+            width: 100%;
+            font-size: 20px;
+            color: white;
+            text-transform: uppercase;
+            background: black;
+            padding: 0.5rem 0;
+            text-align: center;
+            margin: 3rem;
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    font-size: 2rem;
+                    padding: 1rem 0;
+                    margin: 3rem;
+                }
+            }
+        }
+    }
+    .section__locales--dos {
+        display: grid;
+        align-items: center;
+        text-align: center;
+        grid-template: 75px repeat(2, 1fr) / 1fr;
+        width: 91%;
+        margin: 1rem 0;
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 2rem 0 4rem;
+            }
+        }
+
+        .div__argentina {
+            width: 100%;
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+            font-weight: 400;
+            font-size: 15px;
+            padding: 0.5rem 0 ;
+            background-color: whitesmoke;
+            margin-bottom: 1rem;
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    font-weight: 600;
+                    font-size: 30px;
+                    padding: 1rem 0 ;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+        
+
+        .article__palermo{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border: 1px solid black;
+            width: 100%;
+            margin-bottom: 1rem; 
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    width: 45%;
+                    margin-bottom: 0; 
+                    margin-right: 0.75rem;
+                }
+            }
+
+            .mapa__palermo{    
+                width: 100%;
+                height: 20rem;
+                border-bottom: 1px solid black;
+                @media screen and (min-width:768px){
+                    $vista: desktop;
+                    @if $vista == desktop {
+                        height: 26rem;
+                    }
+                }
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+
+            .palermo__letra{
+                font-size: 16px;
+                font-weight: 300;
+                text-align: center;
+                background-color: rgb(32, 31, 31);
+                color: rgb(255, 255, 255);
+                height: 160px;
+                width: 100%;
+
+                h4{
+                    font-size: 30px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-content: center;
+                    text-decoration-line: none;
+                    button{
+                        padding: 0.3rem;
+                        margin: 0.5rem;
+                        text-transform: uppercase;
+                        border: 1px solid gray;
+                        border-radius: 50px;
+                        background-color: white;
+                        &:hover {
+                            border: 3px solid white;
+                            font-weight: 700;
+                         }
+                    }
+                }
+            }
+        }
+        .article__abasto{
+            @extend .article__palermo;
+            
+            .mapa__abasto{
+                @extend .mapa__palermo;
+            }
+            .abasto__letra{
+                @extend .palermo__letra;
+            }
+        }
+    }
+    .section__locales--tres{
+        display: grid;
+        align-items: center;
+        text-align: center;
+        grid-template: 75px repeat(2, 1fr) / 1fr;
+        width: 91%;
+        margin: 1rem 0;
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                justify-content: center;
+                margin: 2rem 0 4rem;
+            }
+        }
+        .china{
+            width: 100%;
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+            font-weight: 400;
+            font-size: 15px;
+            padding: 0.5rem 0 ;
+            background-color: whitesmoke;
+            margin-bottom: 1rem;
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    font-weight: 600;
+                    font-size: 30px;
+                    padding: 1rem 0 ;
+                    margin-bottom: 1.5rem;
+                }
+            }
+        }
+        .article__shanhai {
+            width: 100%;
+            text-transform: uppercase;
+            color: black;
+            text-align: center;
+            font-weight: 400;
+            font-size: 15px;
+            padding: 0.5rem 0 ;
+            background-color: whitesmoke;
+            margin-bottom: 1rem;
+            @media screen and (min-width:768px){
+                $vista: desktop;
+                @if $vista == desktop {
+                    width: 45%;
+                    margin-bottom: 0; 
+                    margin-right: 0.75rem;
+                }
+            }
+
+            .mapa__shanhai{
+                width: 100%;
+                height: 20rem;
+                border-bottom: 1px solid black;
+                @media screen and (min-width:768px){
+                    $vista: desktop;
+                    @if $vista == desktop {
+                        height: 26rem;
+                    }
+                }
+                iframe{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+            .shanhai__letra {
+                font-size: 16px;
+                font-weight: 300;
+                text-align: center;
+                background-color: rgb(32, 31, 31);
+                color: rgb(255, 255, 255);
+                height: 160px;
+                width: 100%;
+
+                h4{
+                    font-size: 30px;
+                    font-weight: 600;
+                    text-align: center;
+                }
+                a{
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    align-content: center;
+                    text-decoration-line: none;
+                    button{
+                        padding: 0.3rem;
+                        margin: 0.5rem;
+                        text-transform: uppercase;
+                        border: 1px solid gray;
+                        border-radius: 50px;
+                        background-color: white;
+                        &:hover {
+                            border: 3px solid white;
+                            font-weight: 700;
+                         }
+                    }
+                }
+            }
+        }
+        .article__pekin{
+            @extend .article__shanhai;
+            
+            .mapa__pekin{
+                @extend .mapa__shanhai;
+            }
+            .pekin__letra{
+                @extend .shanhai__letra;
+            }
+        }
+    }
+    .tienda__to--top {
+        background-color: white;
+        height: 4rem;
+        width: 4rem;
+        display: flex;
+        font-size: 3rem;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 3rem;
+        right: 1rem;
+        i {
+            color: black;
+        }
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                right: 3rem;
+            }
+        }
+    }
+}

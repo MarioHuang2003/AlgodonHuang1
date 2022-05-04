@@ -1,0 +1,166 @@
+/* ---------------------------------------------------- */
+/* Tienda */
+
+.main__tienda {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    .div__bolsa {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background: linear-gradient( 133deg, #C2E3E8,rgba(195, 227, 232, 1), rgba(164, 212, 221, 1), rgba(163, 211, 219, 1), rgba(159, 207, 216, 1));
+        width: 100%;
+        height: 350px;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        img{
+            height: 100%;
+            object-fit: cover;
+        }
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                height: 35rem;
+            }
+        }
+    }
+
+    h1 {
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font-size: 30px;
+        color: white;
+        text-transform: uppercase;
+        background: #58A296;
+        padding: 0.5rem 0;
+        margin: 4rem 0 2rem;
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                font-size: 50px;
+            }
+        }
+    }
+
+    .section__tienda--uno {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-columns: 1fr;
+        margin: 1rem 0 2rem;
+        padding: 3rem 0;
+        text-align: center;
+        justify-content: center;
+        background-color: whitesmoke;
+        width: 95%;
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                grid-template-columns: repeat(3, 1fr);
+                grid-template-rows: 1fr;
+            }
+        }
+        div{
+            div{
+                img{
+                    width: 100%;
+                    height: 100%;
+                    &:hover{
+                        transform: scale(0.96);
+                    }
+                }
+            }
+            div{
+                h3 {
+                    font-size: 25px;
+                    margin: 0.5rem;
+                }
+                h4 {
+                    font-size: 15px;
+                    font-weight: lighter;
+                    text-align: center;
+                    margin-bottom: 0.25rem;
+                
+                }
+                h5 {
+                    font-size: 22px;
+                    font-weight: lighter;
+                    padding: 5px;
+                    background-color: white;
+                }
+                button {
+                    border: none; 
+                    background-color: black; 
+                    color: #ffffff; 
+                    text-transform: uppercase;
+                    border-radius: 50px;
+                    text-align: center;
+                    font-size: 16px;
+                    padding: 15px;
+                    width: 150px;
+                    transition: all 0.5s;
+                    cursor: pointer;
+                    margin: 15PX 5px 5px;
+                    i {
+                        margin: 0 6px;
+                    }
+                }
+            }
+        }
+        
+    }
+
+    .section__tienda--dos {
+        @extend .section__tienda--uno
+    }
+
+    .cambiar{
+        display: flex;
+        flex-direction: column; 
+        align-self: center;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+    .cambiar__img{
+        width: 90%;
+        height: 23rem;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+    }
+    .div__cambiar{
+        text-align: center;
+        height: 250PX;
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .tienda__to--top {
+        background-color: white;
+        height: 4rem;
+        width: 4rem;
+        display: flex;
+        font-size: 3rem;
+        border-radius: 50%;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+        justify-content: center;
+        align-items: center;
+        position: fixed;
+        bottom: 3rem;
+        right: 1rem;
+        i {
+            color: black;
+        }
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                right: 3rem;
+            }
+        }
+    }
+}
+/* Fin Tienda */
+/* ---------------------------------------------------- */
