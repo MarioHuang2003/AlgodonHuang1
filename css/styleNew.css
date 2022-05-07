@@ -469,17 +469,16 @@ footer {
       background-size: cover;
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: end;
       align-items: center;
       box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
       @media screen and (min-width: 768px) {
         .index__main .section__uno .div__uno, .index__main .section__uno .div__dos {
           width: 100%;
-          height: 500px;
-          justify-content: flex-end; } }
+          height: 500px; } }
       .index__main .section__uno .div__uno a, .index__main .section__uno .div__dos a {
-        padding: 1rem 1rem 1rem;
-        margin: 1rem 0 1.5rem;
+        padding: 0rem 1rem 1rem;
+        margin: 0rem 0 1.5rem;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -505,7 +504,9 @@ footer {
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+      box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+      flex-direction: column;
+      justify-content: end; }
       @media screen and (min-width: 768px) {
         .index__main .section__uno #almohada__index, .index__main .section__uno #cortina__index {
           width: 100%;
@@ -515,7 +516,7 @@ footer {
       .index__main .section__uno #almohada__index a, .index__main .section__uno #cortina__index a {
         text-decoration-line: none; }
       .index__main .section__uno #almohada__index button, .index__main .section__uno #cortina__index button {
-        margin: 0 4em 2rem; }
+        margin: 0rem 4em 2rem; }
     .index__main .section__uno #cortina__index {
       background-image: url("../fotos/cortina-home.jpg");
       margin-bottom: 15px; }
@@ -525,12 +526,12 @@ footer {
           height: 500px;
           justify-content: flex-end; } }
     .index__main .section__uno button {
-      margin-bottom: -6rem; }
+      margin-bottom: 0; }
       @media screen and (min-width: 768px) {
         .index__main .section__uno button {
           padding: 0.75rem 1rem;
           border-radius: 10px;
-          margin: 0;
+          margin: 35px;
           border: 1px solid black;
           width: 7rem;
           font-size: 14px; } }
@@ -1131,8 +1132,12 @@ footer {
     height: 350px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
     .main__tienda .div__bolsa img {
+      width: 100%;
       height: 100%;
       object-fit: cover; }
+      @media screen and (min-width: 768px) {
+        .main__tienda .div__bolsa img {
+          width: auto; } }
     @media screen and (min-width: 768px) {
       .main__tienda .div__bolsa {
         height: 35rem; } }
@@ -1145,7 +1150,7 @@ footer {
     text-transform: uppercase;
     background: #37766b;
     padding: 0.5rem 0;
-    margin: 1rem 0 1rem; }
+    margin: 1rem 0 0rem; }
     @media screen and (min-width: 768px) {
       .main__tienda h1 {
         font-size: 60px; } }
@@ -1158,7 +1163,7 @@ footer {
     text-transform: uppercase;
     background: #58A296;
     padding: 0.5rem 0;
-    margin: 3rem 0 2rem; }
+    margin: 2rem 0 2rem; }
     @media screen and (min-width: 768px) {
       .main__tienda h2 {
         font-size: 50px; } }
