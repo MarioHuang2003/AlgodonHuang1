@@ -1125,16 +1125,29 @@ footer {
     text-align: center;
     width: 100%;
     height: 100%;
+    font-size: 40px;
+    color: white;
+    text-transform: uppercase;
+    background: #37766b;
+    padding: 0.5rem 0;
+    margin: 1rem 0 1rem; }
+    @media screen and (min-width: 768px) {
+      .main__tienda h1 {
+        font-size: 60px; } }
+  .main__tienda h2 {
+    text-align: center;
+    width: 100%;
+    height: 100%;
     font-size: 30px;
     color: white;
     text-transform: uppercase;
     background: #58A296;
     padding: 0.5rem 0;
-    margin: 4rem 0 2rem; }
+    margin: 3rem 0 2rem; }
     @media screen and (min-width: 768px) {
-      .main__tienda h1 {
+      .main__tienda h2 {
         font-size: 50px; } }
-  .main__tienda .section__tienda--uno, .main__tienda .section__tienda--dos {
+  .main__tienda .section__tienda--uno, .main__tienda .section__tienda--dos, .main__tienda .section__tienda--tres {
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     grid-template-columns: 1fr;
@@ -1145,28 +1158,28 @@ footer {
     background-color: whitesmoke;
     width: 95%; }
     @media screen and (min-width: 768px) {
-      .main__tienda .section__tienda--uno, .main__tienda .section__tienda--dos {
+      .main__tienda .section__tienda--uno, .main__tienda .section__tienda--dos, .main__tienda .section__tienda--tres {
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 1fr; } }
-    .main__tienda .section__tienda--uno div div img, .main__tienda .section__tienda--dos div div img {
+    .main__tienda .section__tienda--uno div div img, .main__tienda .section__tienda--dos div div img, .main__tienda .section__tienda--tres div div img {
       width: 100%;
       height: 100%; }
-      .main__tienda .section__tienda--uno div div img:hover, .main__tienda .section__tienda--dos div div img:hover {
+      .main__tienda .section__tienda--uno div div img:hover, .main__tienda .section__tienda--dos div div img:hover, .main__tienda .section__tienda--tres div div img:hover {
         transform: scale(0.96); }
-    .main__tienda .section__tienda--uno div div h3, .main__tienda .section__tienda--dos div div h3 {
+    .main__tienda .section__tienda--uno div div h3, .main__tienda .section__tienda--dos div div h3, .main__tienda .section__tienda--tres div div h3 {
       font-size: 25px;
       margin: 0.5rem; }
-    .main__tienda .section__tienda--uno div div h4, .main__tienda .section__tienda--dos div div h4 {
+    .main__tienda .section__tienda--uno div div h4, .main__tienda .section__tienda--dos div div h4, .main__tienda .section__tienda--tres div div h4 {
       font-size: 15px;
       font-weight: lighter;
       text-align: center;
       margin-bottom: 0.25rem; }
-    .main__tienda .section__tienda--uno div div h5, .main__tienda .section__tienda--dos div div h5 {
+    .main__tienda .section__tienda--uno div div h5, .main__tienda .section__tienda--dos div div h5, .main__tienda .section__tienda--tres div div h5 {
       font-size: 22px;
       font-weight: lighter;
       padding: 5px;
       background-color: white; }
-    .main__tienda .section__tienda--uno div div button, .main__tienda .section__tienda--dos div div button {
+    .main__tienda .section__tienda--uno div div button, .main__tienda .section__tienda--dos div div button, .main__tienda .section__tienda--tres div div button {
       border: none;
       background-color: black;
       color: #ffffff;
@@ -1179,7 +1192,7 @@ footer {
       transition: all 0.5s;
       cursor: pointer;
       margin: 15PX 5px 5px; }
-      .main__tienda .section__tienda--uno div div button i, .main__tienda .section__tienda--dos div div button i {
+      .main__tienda .section__tienda--uno div div button i, .main__tienda .section__tienda--dos div div button i, .main__tienda .section__tienda--tres div div button i {
         margin: 0 6px; }
   .main__tienda .cambiar {
     display: flex;

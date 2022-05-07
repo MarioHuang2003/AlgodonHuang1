@@ -27,7 +27,25 @@
         }
     }
 
-    h1 {
+    h1{
+        text-align: center;
+        width: 100%;
+        height: 100%;
+        font-size: 40px;
+        color: white;
+        text-transform: uppercase;
+        background: #37766b;
+        padding: 0.5rem 0;
+        margin: 1rem 0 1rem;
+        @media screen and (min-width:768px){
+            $vista: desktop;
+            @if $vista == desktop {
+                font-size: 60px;
+            }
+        }
+    }
+
+    h2 {
         text-align: center;
         width: 100%;
         height: 100%;
@@ -36,7 +54,7 @@
         text-transform: uppercase;
         background: #58A296;
         padding: 0.5rem 0;
-        margin: 4rem 0 2rem;
+        margin: 3rem 0 2rem;
         @media screen and (min-width:768px){
             $vista: desktop;
             @if $vista == desktop {
@@ -113,7 +131,11 @@
     }
 
     .section__tienda--dos {
-        @extend .section__tienda--uno
+        @extend .section__tienda--uno;
+    }
+
+    .section__tienda--tres {
+        @extend .section__tienda--uno;
     }
 
     .cambiar{
