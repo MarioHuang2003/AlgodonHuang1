@@ -149,7 +149,7 @@ header {
           left: 0;
           top: 45px;
           padding: 0.5rem;
-          height: 8rem;
+          height: 10.5rem;
           background-color: #4C4C4C;
           border-radius: 5px;
           flex-direction: column;
@@ -1493,7 +1493,7 @@ footer {
                 left: 0;
                 top: 40px;
                 padding: 0.5rem;
-                height: 8rem;
+                height: 10.5rem;
                 background-color: #4C4C4C;
                 border-radius: 3px;
                 flex-direction: column;
